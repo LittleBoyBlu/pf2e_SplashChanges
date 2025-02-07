@@ -473,9 +473,7 @@ abstract class PhysicalItemPF2e<TParent extends ActorPF2e | null = ActorPF2e | n
             this !== item &&
             this.type === item.type &&
             this.name === item.name &&
-            this.isIdentified === item.isIdentified &&
-            this.isHeld === item.isHeld &&
-            (!this.isHeld || this.quantity === 0 || item.quantity === 0);
+            this.isIdentified === item.isIdentified;
         if (!preCheck) return false;
 
         const thisData = this.toObject().system;
